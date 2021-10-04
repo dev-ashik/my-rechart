@@ -1,5 +1,6 @@
 import React, { PureComponent } from 'react';
 import { LineChart, Line, XAxis, YAxis, CartesianGrid, Tooltip, Legend, ResponsiveContainer } from 'recharts';
+import styles from "./Linechart.module.css";
 
 const data = [
   {
@@ -48,7 +49,7 @@ const data = [
 
 const Linechart = () => {
   return (
-    <div>
+    <div className={styles.linechart}>
       <ResponsiveContainer width="100%" aspect={3}>
         <LineChart width={300} height={100} data={data}>
           <Line type="monotone" dataKey="pv" stroke="#8884d8" strokeWidth={2} />
